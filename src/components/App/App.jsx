@@ -5,7 +5,9 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Feeling from '../Form/Feeling.jsx';
 import Understanding from '../Form/Understanding.jsx';
 import Support from '../Form/Support.jsx';
-import Comments from '../Form/Comments.jsx'
+import Comments from '../Form/Comments.jsx';
+import Review from '../Form/Review.jsx';
+import ThankYou from '../Form/ThankYou.jsx';
 
 
 function App() {
@@ -29,9 +31,15 @@ function App() {
           {/* Support component */}
         <Support />
         </Route>
-        <Route> 
+        <Route exact path="comments"> 
           {/* Comments component */}
         <Comments />
+        </Route>
+        <Route exact path="review">
+          <Review />
+        </Route>
+        <Route exact path="thank-you">
+          <ThankYou />
         </Route>
       </Router>
     </div>
