@@ -1,7 +1,6 @@
 
 
-
-function Feelings() {
+function Support() {
 
     return (
         <>
@@ -10,4 +9,4 @@ function Feelings() {
     )
 }
 
-export default Feelings;
+export default Support;
