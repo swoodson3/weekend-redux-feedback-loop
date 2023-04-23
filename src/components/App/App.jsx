@@ -25,17 +25,17 @@ function App() {
         </Route>
         <Route exact path="/understanding">
           {/* Understanding component */}
-        <Understanding />
+          <Understanding />
         </Route>
         <Route exact path="/support">
           {/* Support component */}
-        <Support />
+          <Support />
         </Route>
-        <Route exact path="comments"> 
+        <Route exact path="/comments">
           {/* Comments component */}
-        <Comments />
+          <Comments />
         </Route>
-        <Route exact path="review">
+        <Route exact path="/review">
           <Review />
         </Route>
         <Route exact path="thank-you">

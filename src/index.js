@@ -30,11 +30,22 @@ const understandingOne = (state = 0, action) => {
     return state;
 }
 
+// Support reducer
+const supportOne = (state = 0, action) => {
+    if (action.type === 'SET_SUPPORT_RATE') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return 0;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers(
         {
             feelingOne,
             understandingOne,
+            supportOne,
             // Other reducers go here
         }
     ),
