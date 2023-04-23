@@ -20,10 +20,21 @@ const feelingOne = (state = 0, action) => {
     return state;
 }
 
+// Understanding reducer
+const understandingOne = (state = 0, action) => {
+    if (action.type === 'SET_UNDERSTANDING_RATE') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return 0;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers(
         {
             feelingOne,
+            understandingOne,
             // Other reducers go here
         }
     ),
