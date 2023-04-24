@@ -29,11 +29,9 @@ function UnderstandingOne() {
     return (
         <>
             <h3>How well are you understanding the content on a scale of 1 to 5?</h3>
-            <form>
                 <input onChange={handleChange} type="number" placeholder='Leave a rating' required />
                 <input type="submit" />
                 <button onClick={nextPage}>Next</button>
-            </form>
         </>
     )
 }

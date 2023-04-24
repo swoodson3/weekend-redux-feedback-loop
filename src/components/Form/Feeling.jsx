@@ -27,11 +27,9 @@ const nextPage = () => {
     return (
         <>
         <h3>How are you feeling on a scale of 1 to 5?</h3>
-                <form>
                 <input onChange={inputFeelings} type="number" placeholder='Leave a rating' required/>
                 <input type="submit" />
                 <button onClick={nextPage}>Next</button>
-                </form>
         </>
     )
 }
