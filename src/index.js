@@ -40,12 +40,23 @@ const supportOne = (state = 0, action) => {
     return state;
 }
 
+// Comments reducer
+const commentOne = (state = '', action) => {
+    if (action.type === 'SET_COMMENT') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return '';
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers(
         {
             feelingOne,
             understandingOne,
             supportOne,
+            commentOne
             // Other reducers go here
         }
     ),
