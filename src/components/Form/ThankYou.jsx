@@ -9,8 +9,17 @@ function ThankYou() {
   }
     return (
         <>
-        <h3 style={{fontSize: 20}}>Thank you for your feedback!</h3>
-        <button onClick={feedback}>Leave new Feedback!</button>
+        <h3 style={{fontSize: 30}}>Thank you for your feedback!</h3>
+        {/* inline styling for the button */}
+        <button className="button" 
+        style={{
+            backgroundColor: 'navy',
+            color: 'white',
+            frontWeight: 'bold',
+            width: '200px',
+            height: '50px'
+        }} 
+        onClick={feedback}>Leave new Feedback!</button>
         </>
     )
 }
