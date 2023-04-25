@@ -1,5 +1,5 @@
-import {useSelector, useDispatch} from 'react-redux';
-import {useHistory} from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 function Review() {
@@ -14,30 +14,37 @@ function Review() {
 
     const nextPage = () => {
         axios.post('/feedback', {
-          feelings: feelingOne,
-          understandings: understandingOne,
-          supports: supportOne,
-          comments: commentOne
+            feelings: feelingOne,
+            understandings: understandingOne,
+            supports: supportOne,
+            comments: commentOne
         }).then((response) => {
-          dispatch({ type: 'CLEAR_FORM'});
+            dispatch({ type: 'CLEAR_FORM' });
         }).catch((error) => {
-          console.log(`Error in axios POST: ${error}`);
-          alert('Something went wrong!');
+            console.log(`Error in axios POST: ${error}`);
+            alert('Something went wrong!');
         })
 
         history.push('/thank-you')
     }
 
-    
+
 
     return (
         <>
-        <h3>Review your Feedback.</h3>
-      <p>Feelings: {feelingOne}</p>
-      <p>Understanding: {understandingOne}</p>
-      <p>Support: {supportOne}</p>
-      <p>Comments: {commentOne}</p>
-      <button onClick={nextPage}>Submit</button>
+            <h3 style={{ fontSize: 30 }}>Review your Feedback.</h3>
+            <p style={{ fontWeight: 'bold' }}>Feelings: {feelingOne}</p>
+            <p style={{ fontWeight: 'bold' }}>Understanding: {understandingOne}</p>
+            <p style={{ fontWeight: 'bold' }}>Support: {supportOne}</p>
+            <p style={{ fontWeight: 'bold' }}>Comments: {commentOne}</p>
+            <button className="nextPageButtonFive"
+                style={{
+                    backgroundColor: 'navy',
+                    color: 'white',
+                    frontWeight: 'bold',
+                    width: '60px',
+                    height: '30px'
+                }} onClick={nextPage}>Submit</button>
         </>
     )
 }

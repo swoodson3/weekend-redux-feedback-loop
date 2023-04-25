@@ -32,14 +32,6 @@ function UnderstandingOne() {
         <>
             <h3 style= {{fontSize: 30 }}>How well are you understanding the content on a scale of 1 to 5?</h3>
                 <input className ="inputButtontwo" style={{width: '150px', height: '20px', borderRadius: '5px', border: '1px solid gray', padding: '5px' }} onChange={handleChange} type="number" placeholder='Leave a rating' />
-                <input className="submitButtontwo"
-                style={{
-                    backgroundColor: 'navy',
-                    color: 'white',
-                    frontWeight: 'bold',
-                    width: '60px',
-                    height: '30px'
-                }} type="submit" />
                 <button className="nextPageButtontwo"
                 style={{
                     backgroundColor: 'navy',
